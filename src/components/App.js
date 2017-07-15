@@ -6,22 +6,32 @@ import './App.css';
 import NotExist from './NotExists'
 import Home from '../routes/Home';
 import Posts from '../routes/Posts';
+import { Tab, Tabs } from "../components/Tabs";
 
+import Header from "../components/Header";
 
 class App extends Component {
   render() {
     return (
       <Router>
         <div className="App">
-          <div className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <h1>i Design</h1>
-          </div>
+          <Header isIdesign={true} title={"i Design"}></Header>
+
+          <Tabs id="tabbedNavigation" navigationHeight={80} navigationSticky={true}>
+              <Tab label="iDesign" active>Home</Tab>
+              <Tab label="Portfolio">Portfolio</Tab>
+              <Tab label="Price">Price</Tab>
+              <Tab label="Contact">Contact</Tab>
+              <Tab label="Chat">Chat</Tab>
+          </Tabs>
+          
+
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/posts" component={Posts} />
             <Route component={NotExist} />
           </Switch>
+
           <div className="App-footer">
             <h2>Footer Area</h2>
           </div>
