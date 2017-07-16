@@ -1,6 +1,5 @@
-import React from "react";
+import React, { PropTypes }from "react";
 import Radium from "radium";
-import PropTypes from "prop-types";
 import Text from "../Text";
 import { black, white, geyser, shuttleGray, linkBlue } from "../../style/color";
 import { borderWidth } from "../../style/border";

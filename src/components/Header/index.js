@@ -1,8 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React, { PropTypes } from "react";
 import Text from "../Text";
 import { white, geyser, shuttleGray } from "../../style/color";
 import { borderWidth } from "../../style/border";
+import { Tab, Tabs } from "../Tabs";
+import { BrowserRouter as Router, Link } from 'react-router-dom'
 
 const headerStyle = {
     defaultHeader: {
@@ -32,31 +33,43 @@ const headerStyle = {
 };
 
 export default class IdesignHeader extends React.Component {
-    render() {
-        const isIdesign = this.props.isIdesign;
 
-        return (
+  render() {
+      const isIdesign = this.props.isIdesign;
+
+      return (
+        <div>
+        {isIdesign?(
           <div>
-          {isIdesign?(
-              <div style={headerStyle.appHeader}>
-                  <div style={headerStyle.appTitle}>{this.props.title}</div>
-              </div>        
-            ):(
-              <div style={headerStyle.defaultHeader}>
-                <Text color={this.props.color} size={"large"} weight={"bold"}>{this.props.title}</Text>
-              </div>
-            )}
+            <div style={headerStyle.appHeader}>
+                <div style={headerStyle.appTitle}>{this.props.title}</div>
+            </div> 
+            
+            <Tabs id="tabbedNavigation" navigationHeight={80} navigationSticky={true}>
+                <Tab label="iDesign" active></Tab>
+                <Tab label="Portfolio"></Tab>
+                <Tab label="Price"></Tab>
+                <Tab label="Contact"></Tab>
+                <Tab label="Chat"></Tab>
+            </Tabs>
+            
           </div>
-        )
-    }
+          ):(
+            <div style={headerStyle.defaultHeader}>
+              <Text color={this.props.color} size={"large"} weight={"bold"}>{this.props.title}</Text>
+            </div>
+          )}
+        </div>
+      )
+  }
 
-    propTypes = {
-      title: PropTypes.string,
-      subtitle: PropTypes.string
-    };
+  propTypes = {
+    title: PropTypes.string,
+    subtitle: PropTypes.string
+  };
 
-    defaultProps = {
-      title: "Header"
-    };
+  defaultProps = {
+    title: "Header"
+  };
 
 }

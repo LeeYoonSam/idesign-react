@@ -1,7 +1,6 @@
-import React from "react";
+import React, { PropTypes } from "react";
 import Radium from "radium";
 import Text from "../Text";
-import PropTypes from "prop-types";
 import { black, white, geyser, shuttleGray, linkBlue } from "../../style/color";
 import { fontWeight, fontWeightBold } from "../../style/font";
 import speed from "../../style/speed";

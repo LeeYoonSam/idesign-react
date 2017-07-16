@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import logo from '../logo.svg';
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import './App.css';
-
 import NotExist from './NotExists'
 import Home from '../routes/Home';
 import Posts from '../routes/Posts';
-import { Tab, Tabs } from "../components/Tabs";
 
 import Header from "../components/Header";
 
@@ -15,16 +12,15 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <Header isIdesign={true} title={"i Design"}></Header>
-
-          <Tabs id="tabbedNavigation" navigationHeight={80} navigationSticky={true}>
-              <Tab label="iDesign" active>Home</Tab>
-              <Tab label="Portfolio">Portfolio</Tab>
-              <Tab label="Price">Price</Tab>
-              <Tab label="Contact">Contact</Tab>
-              <Tab label="Chat">Chat</Tab>
-          </Tabs>
-          
+        {/*<Header isIdesign={true} title={"i Design"}></Header>*/}
+          <Header title={"i Design"}></Header>
+            <nav>
+              <ul style={{height:40}}>
+                <li style={{float: "left", display: "block"}}><Link style={{padding: 20}} to="/">iDesign</Link></li>
+                <li style={{float: "left", display: "block"}}><Link style={{padding: 20}} to="/posts">Portfolio</Link></li>
+                <li style={{float: "left", display: "block"}}><Link style={{padding: 20}} to="/price">Price</Link></li>
+              </ul>
+            </nav>
 
           <Switch>
             <Route exact path="/" component={Home} />
