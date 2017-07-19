@@ -7,7 +7,7 @@ let masonryOptions = {
     transitionDuration: 0,
 };
 
-class Gallery extends React.Component {
+export default class Gallery extends React.Component {
     render() {
         let childElements = this.props.posts.map(function(post, key){
            return (
@@ -37,4 +37,3 @@ class Gallery extends React.Component {
         );
     }
 }
-export default Gallery;

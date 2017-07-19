@@ -2,8 +2,8 @@ import React from "react";
 import Radium from "radium";
 import PropTypes from "prop-types";
 import cn from "classnames";
-import { white, black } from "../../style/color";
-import { borderWidth } from "../../style/border";
+import { white, black } from "../../../style/color";
+import { borderWidth } from "../../../style/border";
 
 const containerWidth = 1290;
 const gutterWidth = 30;

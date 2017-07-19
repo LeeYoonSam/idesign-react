@@ -30,6 +30,7 @@ export default class Home extends Component {
         return (
             <div>
                 <Gallery posts={ this.state.posts }/>
+                Gallery
             </div>
         );
     }

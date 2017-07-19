@@ -1,6 +1,6 @@
 import React, { PropTypes } from "react";
 import Radium from "radium";
-import { propStyle } from "../../lib/utils";
+import { propStyle } from "../../../lib/utils";
 import Container from "../Container";
 
 const TabPanel = props => (
