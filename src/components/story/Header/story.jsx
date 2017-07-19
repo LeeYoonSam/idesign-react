@@ -3,7 +3,7 @@ import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { checkA11y } from "storybook-addon-a11y";
 
-import { white, black } from "../../style/color";
+import { white, black } from "../../../style/color";
 
 import Header from "./index";
 

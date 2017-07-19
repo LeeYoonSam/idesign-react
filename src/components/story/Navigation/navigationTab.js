@@ -1,20 +1,21 @@
 import React, { PropTypes }from "react";
 import Radium from "radium";
 import Text from "../Text";
-import { black, white, geyser, shuttleGray, linkBlue } from "../../style/color";
-import { borderWidth } from "../../style/border";
-import { fontFamily, fontWeight, fontWeightBold } from "../../style/font";
-import speed from "../../style/speed";
-import { propStyle } from "../../lib/utils";
+import { black, white, geyser, shuttleGray, linkBlue } from "../../../style/color";
+import { borderWidth } from "../../../style/border";
+import { fontFamily, fontWeight, fontWeightBold } from "../../../style/font";
+import speed from "../../../style/speed";
+import { propStyle } from "../../../lib/utils";
+import { Link } from 'react-router-dom';
 
 const fontSizeUppercase = 11;
 
 function textUppercase() {
   return {
     fontFamily: fontFamily,
-    fontSize: `11px`,
+    fontSize: `15px`,
     fontWeight: fontWeight,
-    lineHeight: 11 / fontSizeUppercase,
+    lineHeight: 15 / fontSizeUppercase,
     textTransform: "uppercase"
   };
 }
@@ -59,7 +60,9 @@ const styles = Object.assign(
 const NavigationTab = props => {
   const { children, onClick, active, style, ...properties } = props;
 
+  // let Link = props.parentLink;
   return (
+    <Link to={props.to}>
     <button
       className="NavigationTab"
       onClick={onClick}
@@ -68,6 +71,8 @@ const NavigationTab = props => {
     >
       {children}
     </button>
+
+    </Link>
   );
 };
 

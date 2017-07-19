@@ -10,7 +10,7 @@ import React, {
 import Radium from "radium";
 import { Navigation } from "../Navigation";
 import TabPanel from "./tabPanel";
-import { propStyle } from "../../lib/utils";
+import { propStyle } from "../../../lib/utils";
 
 class Tabs extends Component {
   constructor(props) {

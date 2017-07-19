@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { calculateStyles } from "../../lib/utils";
+import { calculateStyles } from "../../../lib/utils";
 import {
   fontFamily,
   fontSize,
@@ -11,8 +11,8 @@ import {
   fontWeight,
   fontWeightBold,
   fontWeightThin
-} from "../../style/font";
-import colors from "../../style/color";
+} from "../../../style/font";
+import colors from "../../../style/color";
 
 const Text = ({ children, size, weight, color }) => {
   const style = calculateStyles(

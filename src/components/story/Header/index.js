@@ -1,9 +1,8 @@
 import React, { PropTypes } from "react";
 import Text from "../Text";
-import { white, geyser, shuttleGray } from "../../style/color";
-import { borderWidth } from "../../style/border";
+import { white, geyser, shuttleGray } from "../../../style/color";
+import { borderWidth } from "../../../style/border";
 import { Tab, Tabs } from "../Tabs";
-import { BrowserRouter as Router, Link } from 'react-router-dom'
 
 const headerStyle = {
     defaultHeader: {
@@ -46,11 +45,11 @@ export default class IdesignHeader extends React.Component {
             </div> 
             
             <Tabs id="tabbedNavigation" navigationHeight={80} navigationSticky={true}>
-                <Tab label="iDesign" active></Tab>
-                <Tab label="Portfolio"></Tab>
-                <Tab label="Price"></Tab>
-                <Tab label="Contact"></Tab>
-                <Tab label="Chat"></Tab>
+                <Tab to={"/"} label="아이디자인" active></Tab>
+                <Tab to={"/portfolio"} label="포트폴리오"></Tab>
+                <Tab to={"/price"} label="가격"></Tab>
+                <Tab to={"/contacts"} label="상품문의"></Tab>
+                <Tab to={"/events"} label="이벤트"></Tab>
             </Tabs>
             
           </div>
